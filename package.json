@@ -1,7 +1,7 @@
 {
   "name": "blue-tape",
   "version": "0.1.0",
-  "description": "Tape test runner with promises support via Bluebird",
+  "description": "Tape test runner with promise support",
   "main": "blue-tape.js",
   "scripts": {
     "test": "node test/index.js"
