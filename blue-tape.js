@@ -1,16 +1,19 @@
 var Test = require('tape/lib/test');
 
+function isPromise(p) {
+    return p && p.then && p.then instanceof Function;
+}
+
+
 Test.prototype.run = function () {
     if (this._skip) 
         return this.end();
     this.emit('prerun');
     try {
-        var promise = this._cb(this);
+        var p = this._cb(this);
         var self = this;
-        if (!this.ended 
-            && promise.then 
-        && promise.then instanceof Function) 
-            promise.then(function() {
+        if (!this.ended && isPromise(p))
+            p.then(function() {
                 self.end();
             }, function(err) {
                 self.error(err);
