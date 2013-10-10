@@ -6,7 +6,7 @@ Tape with promise support.
 
 Same as tape, except if you return a promise from a test,
 it will be checked for errors. If there are no errors, the test
-will end. Otherwise the error will be shown.
+will end. Otherwise the test will fail.
 
 ### example 
 
