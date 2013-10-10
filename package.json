@@ -1,0 +1,22 @@
+{
+  "name": "blue-tape",
+  "version": "0.1.0",
+  "description": "Tape test runner with promises support via Bluebird",
+  "main": "blue-tape.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "keywords": [
+    "tape",
+    "bluebird",
+    "promises"
+  ],
+  "author": "spion",
+  "license": "MIT",
+  "dependencies": {
+    "tape": "~1.1.1"
+  },
+  "devDependencies": {
+    "bluebird": "~0.8.0-2"
+  }
+}
