@@ -18,5 +18,15 @@
   },
   "devDependencies": {
     "bluebird": "~0.8.0-2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/spion/blue-tape.git"
+  },
+  "bugs": {
+    "url": "https://github.com/spion/blue-tape/issues"
   }
 }
