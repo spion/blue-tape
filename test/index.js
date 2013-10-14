@@ -27,6 +27,15 @@ test("plan", function(t) {
     return delay(1);
 })
 
+test("inner", function(t) {
+    t.test("delay1", function(t) {
+        return delay(1);
+    });
+    t.test("delay2", function() {
+        return delay(1);
+    });
+});
+
 
 test("should fail", function(t) {
     return delay(1).then(function() {

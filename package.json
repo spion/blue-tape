@@ -14,10 +14,7 @@
   "author": "spion",
   "license": "MIT",
   "dependencies": {
-    "tape": "~1.1.1"
-  },
-  "devDependencies": {
-    "bluebird": "~0.8.0-2"
+    "tape": "git://github.com/doxout/tape"
   },
   "directories": {
     "test": "test"
@@ -28,5 +25,8 @@
   },
   "bugs": {
     "url": "https://github.com/spion/blue-tape/issues"
+  },
+  "devDependencies": {
+    "bluebird": "~0.8.3-3"
   }
 }
