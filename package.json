@@ -4,7 +4,7 @@
   "description": "Tape test runner with promise support",
   "main": "blue-tape.js",
   "scripts": {
-    "test": "node test/index.js"
+    "test": "set -e; for test in test/*.js; do node $test; done"
   },
   "keywords": [
     "tape",
@@ -14,7 +14,7 @@
   "author": "spion",
   "license": "MIT",
   "dependencies": {
-    "tape": "~2.3.2"
+    "tape": "~2.13.3"
   },
   "directories": {
     "test": "test"
@@ -27,6 +27,6 @@
     "url": "https://github.com/spion/blue-tape/issues"
   },
   "devDependencies": {
-    "bluebird": "~0.8.3-3"
+    "bluebird": "~2.1.2"
   }
 }
