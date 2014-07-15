@@ -6,9 +6,10 @@ Tape with promise support.
 
 Same as tape, except if you return a promise from a test,
 it will be checked for errors. If there are no errors, the test
-will end. Otherwise the test will fail.
+will end. Otherwise the test will fail. This means there is no
+need to use `t.plan()` or `t.end()`
 
-### example 
+### example
 
 assuming `delay()` returns a promise
 
