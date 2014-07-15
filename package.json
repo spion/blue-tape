@@ -14,7 +14,7 @@
   "author": "spion",
   "license": "MIT",
   "dependencies": {
-    "tape": "~2.13.3"
+    "tape": "2.x"
   },
   "directories": {
     "test": "test"
@@ -27,6 +27,6 @@
     "url": "https://github.com/spion/blue-tape/issues"
   },
   "devDependencies": {
-    "bluebird": "~2.1.2"
+    "bluebird": "^2.1.2"
   }
 }
