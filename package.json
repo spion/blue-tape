@@ -14,7 +14,7 @@
   "author": "spion",
   "license": "MIT",
   "dependencies": {
-    "tape": "2.x"
+    "tape": ">=2.0.0 <4.0.0"
   },
   "directories": {
     "test": "test"
