@@ -1,7 +1,7 @@
 var Test = require('tape/lib/test');
 
 function checkPromise(p) {
-    return p && p.then && p.then instanceof Function;
+    return p && p.then && typeof p.then === 'function';
 }
 
 
