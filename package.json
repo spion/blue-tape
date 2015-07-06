@@ -3,6 +3,9 @@
   "version": "0.1.9",
   "description": "Tape test runner with promise support",
   "main": "blue-tape.js",
+  "bin": {
+    "blue-tape": "./bin/blue-tape.js"
+  },
   "scripts": {
     "test": "set -e; for test in test/*.js; do node $test; done"
   },
