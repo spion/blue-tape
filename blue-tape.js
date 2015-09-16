@@ -5,11 +5,6 @@ function checkPromise(p) {
 }
 
 
-var nextTick = typeof setImmediate !== 'undefined'
-    ? setImmediate
-    : process.nextTick
-;
-
 Test.prototype.run = function () {
     if (this._skip) 
         return this.end();
