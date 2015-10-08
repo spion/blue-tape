@@ -26,6 +26,19 @@ test("should fail", function(t) {
 });
 ```
 
+### Generators
+
+If you're using a version of NodeJS that supports generator functions, you
+can test generators by passing a generator function as the tape
+callback function.
+
+```js
+test("simple generator", function*(t) { // <-- Note the function* callback
+  var asyncResult = yield yieldableFunction();
+  t.ok(asyncResult.status, "Yield resolved to a status object");
+})
+```
+
 ### license
 
 MIT

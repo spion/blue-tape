@@ -17,6 +17,7 @@
   "author": "spion",
   "license": "MIT",
   "dependencies": {
+    "co": "^4.6.0",
     "tape": ">=2.0.0 <5.0.0"
   },
   "directories": {
