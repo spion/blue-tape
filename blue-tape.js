@@ -13,7 +13,7 @@ Test.prototype.run = function () {
         var p = this._cb && this._cb(this),
             isPromise = checkPromise(p)
         var self = this;
-        if (checkPromise(p))
+        if (isPromise)
             p.then(function() {
                 self.end();
             }, function(err) {
