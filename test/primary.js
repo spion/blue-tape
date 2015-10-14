@@ -38,8 +38,11 @@ test("inner", function(t) {
 
 
 test("should fail", function(t) {
-    return delay(1).then(function() {
-        throw new Error("Failed!");
+    t.plan(1);
+    delay(1).then(function() {
+        throw new RangeError("Failed!");
+    })['catch'](function (e) {
+        t.ok(e instanceof RangeError, 'error is thrown');
     });
 });
 
