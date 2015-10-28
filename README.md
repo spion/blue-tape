@@ -1,8 +1,9 @@
-# blue-tape
+# tape-dispenser
 
-Tape with promise support.
+Tape with promise and generator function support. Forked from
+[blue-tape](https://github.com/spion/blue-tape), and all credit should go to spion and substack.
 
-### usage
+### usage with promises
 
 Same as tape, except if you return a promise from a test,
 it will be checked for errors. If there are no errors, the test

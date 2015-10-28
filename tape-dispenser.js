@@ -1,11 +1,12 @@
 var Test = require('tape/lib/test');
+var co = require('co');
 
 function checkPromise(p) {
     return p && typeof p.then === 'function';
 }
 
 function checkGenerator(g) {
-    return g && typeof g.next === 'function' && typof g.throw === 'function';
+    return g && typeof g.next === 'function' && typeof g.throw === 'function';
 }
 
 

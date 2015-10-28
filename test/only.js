@@ -1,5 +1,5 @@
 
-var test = require('../blue-tape').test
+var test = require('../tape-dispenser').test
 var P = require('bluebird');
 P.longStackTraces();
 

@@ -1,10 +1,10 @@
 {
-  "name": "blue-tape",
-  "version": "0.1.10",
-  "description": "Tape test runner with promise support",
-  "main": "blue-tape.js",
+  "name": "tape-dispenser",
+  "version": "0.2.0",
+  "description": "Tape test runner with promise and generator function support",
+  "main": "tape-dispenser.js",
   "bin": {
-    "blue-tape": "./bin/blue-tape.js"
+    "blue-tape": "./bin/tape-dispenser.js"
   },
   "scripts": {
     "test": "set -e; for test in test/*.js; do node $test; done"
@@ -12,9 +12,11 @@
   "keywords": [
     "tape",
     "bluebird",
-    "promises"
+    "promises",
+    "es6",
+    "generators"
   ],
-  "author": "spion",
+  "author": "Justin Marrington <@howlingeverett>",
   "license": "MIT",
   "dependencies": {
     "co": "^4.6.0",
@@ -25,10 +27,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/spion/blue-tape.git"
+    "url": "https://github.com/HowlingEverett/tape-dispenser"
   },
   "bugs": {
-    "url": "https://github.com/spion/blue-tape/issues"
+    "url": "https://github.com/HowlingEverett/tape-dispenser/issues"
   },
   "devDependencies": {
     "bluebird": "^2.1.2"

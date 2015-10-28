@@ -1,5 +1,5 @@
 
-var test = require('../blue-tape').test
+var test = require('../tape-dispenser').test
 var P = require('bluebird');
 P.longStackTraces();
 
@@ -35,12 +35,3 @@ test("inner", function(t) {
         return delay(1);
     });
 });
-
-
-test("should fail", function(t) {
-    return delay(1).then(function() {
-        throw new Error("Failed!");
-    });
-});
-
-
