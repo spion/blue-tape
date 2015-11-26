@@ -6,7 +6,7 @@ function checkPromise(p) {
 
 
 Test.prototype.run = function () {
-    if (this._skip) 
+    if (this._skip)
         return this.end();
     this.emit('prerun');
     try {
@@ -17,13 +17,13 @@ Test.prototype.run = function () {
             p.then(function() {
                 self.end();
             }, function(err) {
-                self.error(err);
+                err ? self.error(err) : self.fail(err);
                 self.end();
-            })        
+            })
 
     }
     catch (err) {
-        this.error(err);
+        err ? self.error(err) : self.fail(err);
         this.end();
         return;
     }

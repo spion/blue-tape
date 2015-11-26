@@ -37,10 +37,14 @@ test("inner", function(t) {
 });
 
 
-test("should fail", function(t) {
+test("should error", function(t) {
     return delay(1).then(function() {
         throw new Error("Failed!");
     });
 });
 
-
+test("should fail", function(t) {
+    return delay(1).then(function() {
+        return P.reject();
+    });
+});
