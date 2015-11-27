@@ -1,6 +1,6 @@
 {
   "name": "blue-tape",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Tape test runner with promise support",
   "main": "blue-tape.js",
   "bin": {
