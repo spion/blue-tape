@@ -7,7 +7,7 @@
     "blue-tape": "./bin/blue-tape.js"
   },
   "scripts": {
-    "test": "set -e; for test in test/*.js; do node $test; done"
+    "test": "node test/index.js"
   },
   "keywords": [
     "tape",
@@ -30,6 +30,7 @@
     "url": "https://github.com/spion/blue-tape/issues"
   },
   "devDependencies": {
+    "bl": "^1.0.0",
     "bluebird": "^2.1.2"
   }
 }

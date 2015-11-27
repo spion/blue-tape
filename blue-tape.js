@@ -23,7 +23,7 @@ Test.prototype.run = function () {
 
     }
     catch (err) {
-        err ? self.error(err) : self.fail(err);
+        err ? this.error(err) : this.fail(err);
         this.end();
         return;
     }
