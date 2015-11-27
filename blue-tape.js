@@ -1,7 +1,8 @@
 var Test = require('tape/lib/test');
+var isCallable = require('is-callable');
 
 function checkPromise(p) {
-    return p && p.then && typeof p.then === 'function';
+    return p && isCallable(p.then);
 }
 
 
