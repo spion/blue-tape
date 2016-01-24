@@ -1,6 +1,4 @@
-
 var tape = require('../blue-tape');
-
 var bl = require('bl')
 var P = require('bluebird');
 P.longStackTraces();
@@ -92,3 +90,34 @@ test("run test with only", function(t, htest) {
     t.end();
   },
   verifyAsserts({ok: 1, fail: 0}));
+
+
+test("test that expects promise to fail", function(t) {
+    return t.shouldFail(P.delay(1).then(function() {
+        return P.reject();
+    }));
+  },
+  verifyAsserts({ok: 1, fail: 0}));
+
+test("test that expects promise to fail, but it succeeds", function(t) {
+    return t.shouldFail(P.delay(1).then(function() {
+        return P.resolve();
+    }));
+  },
+  verifyAsserts({ok: 0, fail: 1}));
+
+test("test that expects specific exception", function(t) {
+    return t.shouldFail(P.delay(1).then(function() {
+        var f = 5;
+        f.toFixed(100); // RangeError
+    }), RangeError);
+  },
+  verifyAsserts({ok: 1, fail: 0}));
+
+test("test that expects wrong exception", function(t) {
+    return t.shouldFail(P.delay(1).then(function() {
+        var f = 5;
+        f.toFixed(100); // RangeError
+    }), SyntaxError);
+  },
+  verifyAsserts({ok: 0, fail: 1}));

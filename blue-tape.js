@@ -30,4 +30,15 @@ Test.prototype.run = function () {
     this.emit('run');
 };
 
+Test.prototype.shouldFail = function (promise, clazz) {
+    return promise.then(function() {
+        throw new Error('should have failed');
+    }, function(err) {
+        if (clazz && !(err instanceof clazz)) {
+            throw new Error('should have thrown an instance of ' + clazz)
+        }
+        this.ok(true)
+    }.bind(this));
+}
+
 module.exports = require('tape');
