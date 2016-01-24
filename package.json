@@ -7,7 +7,7 @@
     "blue-tape": "./bin/blue-tape.js"
   },
   "scripts": {
-    "test": "node test/index.js"
+    "test": "standard && node test/index.js"
   },
   "keywords": [
     "tape",
@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "bl": "^1.0.0",
-    "bluebird": "^2.1.2"
+    "bluebird": "^2.1.2",
+    "standard": "*"
   }
 }
