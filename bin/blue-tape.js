@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require('tape/bin/tape');
+require('tape/bin/tape')
