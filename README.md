@@ -14,7 +14,7 @@ a new promise that resolves successfully iff `P` rejects. If you provide
 the optional class, then it additiionally ensures that `err` is an
 instance of that class.
 
-Also provides `t.fails(promise P, optional string message)` which also asserts the promise should fail, but lets you supply a message.
+Also provides `t.shouldReject(promise P, optional string message)` which also asserts the promise should fail, but lets you supply a message.
 
 ### example
 
@@ -40,7 +40,7 @@ test("promise fails but test succeeds", function(t) {
     return t.shouldFail(failDelay(), DerpError)
 });
 test("promise fails but test succeeds with message", function(t) {
-  return t.fails(failDelay(), 'here\'s a message')
+  return t.shouldReject(failDelay(), 'here\'s a message')
 })
 ```
 
