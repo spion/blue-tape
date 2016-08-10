@@ -41,7 +41,7 @@ Test.prototype.shouldFail = function (promise, clazz, expErr) {
       throw new Error('should have thrown an instance of ' + clazz)
     }
     if (expErr && (err.toString() !== expErr.toString())) {
-      throw new Error('should have thrown this error: ' + expErr.toString());
+      throw new Error('should have thrown this error: ' + expErr.toString())
     }
     this.ok(true)
   }.bind(this))
