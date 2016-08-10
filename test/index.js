@@ -119,3 +119,17 @@ test('test that expects wrong exception', function (t) {
   }), SyntaxError)
 },
   verifyAsserts({ok: 0, fail: 1}))
+
+test('test that expects specific custom exception', function (t) {
+  return t.shouldFail(P.delay(1).then(function () {
+    throw new Error('Failed!')
+  }), null, new Error('Failed!'))
+},
+  verifyAsserts({ok: 1, fail: 0}))
+
+test('test that expects wrong custom exception', function (t) {
+  return t.shouldFail(P.delay(1).then(function () {
+    throw new Error('Failed!')
+  }), null, new Error('a'))
+},
+  verifyAsserts({ok: 0, fail: 1}))
