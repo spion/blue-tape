@@ -33,12 +33,15 @@ Test.prototype.run = function () {
   this.emit('run')
 }
 
-Test.prototype.shouldFail = function (promise, clazz) {
+Test.prototype.shouldFail = function (promise, clazz, expErr) {
   return promise.then(function () {
     throw new Error('should have failed')
   }, function (err) {
     if (clazz && !(err instanceof clazz)) {
       throw new Error('should have thrown an instance of ' + clazz)
+    }
+    if (expErr && (err.toString() !== expErr.toString())) {
+      throw new Error('should have thrown this error: ' + expErr.toString());
     }
     this.ok(true)
   }.bind(this))
