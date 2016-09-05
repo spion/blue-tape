@@ -44,11 +44,4 @@ Test.prototype.shouldFail = function (promise, clazz) {
   }.bind(this))
 }
 
-Test.prototype.shouldReject = function (promise, message) {
-  return promise.then(
-    this.fail.bind(this, message),
-    this.pass.bind(this, message)
-  )
-}
-
 module.exports = require('tape')
