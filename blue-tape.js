@@ -33,15 +33,19 @@ Test.prototype.run = function () {
   this.emit('run')
 }
 
-Test.prototype.shouldFail = function (promise, clazz) {
+function noop() {}
+
+Test.prototype.shouldFail =
+Test.prototype.shouldReject =
+function (promise, expected, message, extra) {
+  var self = this
   return promise.then(function () {
-    throw new Error('should have failed')
+    self.throws(noop, expected, message, extra)
   }, function (err) {
-    if (clazz && !(err instanceof clazz)) {
-      throw new Error('should have thrown an instance of ' + clazz)
-    }
-    this.ok(true)
-  }.bind(this))
+    function f() {throw err}
+    self.throws(f, expected, message, extra)
+  })
 }
+
 
 module.exports = require('tape')

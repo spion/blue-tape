@@ -92,7 +92,7 @@ test('run test with only', function (t, htest) {
 
 test('test that expects promise to fail', function (t) {
   return t.shouldFail(P.delay(1).then(function () {
-    return P.reject()
+    return P.reject(new Error("Test"))
   }))
 },
   verifyAsserts({ok: 1, fail: 0}))
