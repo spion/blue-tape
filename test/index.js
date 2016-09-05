@@ -104,6 +104,20 @@ test('test that expects promise to fail, but it succeeds', function (t) {
 },
   verifyAsserts({ok: 0, fail: 1}))
 
+test('test that expects promise to fail with message', function (t) {
+  return t.shouldReject(P.delay(1).then(function () {
+    return P.reject()
+  }), 'message!')
+},
+  verifyAsserts({ok: 1, fail: 0}))
+
+test('test that expects promise to fail with message, but it succeeds', function (t) {
+  return t.shouldReject(P.delay(1).then(function () {
+    return P.resolve()
+  }), 'message!')
+},
+  verifyAsserts({ok: 0, fail: 1}))
+
 test('test that expects specific exception', function (t) {
   return t.shouldFail(P.delay(1).then(function () {
     var f = 5
