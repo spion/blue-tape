@@ -7,4 +7,4 @@ assignees: ''
 
 ---
 
-The best option is to switch to a library that supports promises - either tapjs/node-tap - or perhaps its time to revisit substack/tape/issues/262 and add promise support to tape.
+The best option is to switch to a library that supports promises - either https://github.com/jprichardson/tape-promise or https://www.node-tap.org/ - or perhaps its time to revisit substack/tape/issues/262 and add promise support to tape.
