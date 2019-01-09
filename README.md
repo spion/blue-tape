@@ -1,6 +1,6 @@
 #### This project is no longer maintained.
 
-The best option is to switch to a library that supports promises - either https://github.com/tapjs/node-tap - or perhaps its time to revisit https://github.com/substack/tape/issues/262 and add promise support to tape.
+The best option is to switch to a library that supports promises - either https://github.com/jprichardson/tape-promise or https://github.com/tapjs/node-tap - or perhaps its time to revisit https://github.com/substack/tape/issues/262 and add promise support to tape.
 
 --------------
 
